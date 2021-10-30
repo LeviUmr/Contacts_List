@@ -37,7 +37,7 @@ namespace Contacts
 			System.Windows.Forms.Label telephoneLabel;
 			System.Windows.Forms.Label companyLabel;
 			System.Windows.Forms.Label nameLabel;
-			System.Windows.Forms.Label contactIDLabel1;
+			System.Windows.Forms.Label contactIDLabel;
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.contactDBDataSet = new Contacts.ContactDBDataSet();
 			this.peopleBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -62,14 +62,14 @@ namespace Contacts
 			this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
 			this.peopleBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
 			this.peopleBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-			this.contactIDLabel2 = new System.Windows.Forms.Label();
+			this.contactIDTextBox = new System.Windows.Forms.TextBox();
 			lastCallLabel = new System.Windows.Forms.Label();
 			clientLabel = new System.Windows.Forms.Label();
 			emailLabel = new System.Windows.Forms.Label();
 			telephoneLabel = new System.Windows.Forms.Label();
 			companyLabel = new System.Windows.Forms.Label();
 			nameLabel = new System.Windows.Forms.Label();
-			contactIDLabel1 = new System.Windows.Forms.Label();
+			contactIDLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.contactDBDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).BeginInit();
@@ -80,9 +80,9 @@ namespace Contacts
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(472, 26);
+			this.pictureBox1.Location = new System.Drawing.Point(450, 50);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(127, 129);
+			this.pictureBox1.Size = new System.Drawing.Size(156, 153);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
@@ -111,7 +111,7 @@ namespace Contacts
 			// lastCallDateTimePicker
 			// 
 			this.lastCallDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.peopleBindingSource, "LastCall", true));
-			this.lastCallDateTimePicker.Location = new System.Drawing.Point(117, 221);
+			this.lastCallDateTimePicker.Location = new System.Drawing.Point(124, 213);
 			this.lastCallDateTimePicker.Name = "lastCallDateTimePicker";
 			this.lastCallDateTimePicker.Size = new System.Drawing.Size(262, 20);
 			this.lastCallDateTimePicker.TabIndex = 15;
@@ -120,7 +120,7 @@ namespace Contacts
 			// lastCallLabel
 			// 
 			lastCallLabel.AutoSize = true;
-			lastCallLabel.Location = new System.Drawing.Point(50, 225);
+			lastCallLabel.Location = new System.Drawing.Point(40, 219);
 			lastCallLabel.Name = "lastCallLabel";
 			lastCallLabel.Size = new System.Drawing.Size(50, 13);
 			lastCallLabel.TabIndex = 14;
@@ -130,18 +130,17 @@ namespace Contacts
 			// clientCheckBox
 			// 
 			this.clientCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.peopleBindingSource, "Client", true));
-			this.clientCheckBox.Location = new System.Drawing.Point(117, 191);
+			this.clientCheckBox.Location = new System.Drawing.Point(124, 185);
 			this.clientCheckBox.Name = "clientCheckBox";
 			this.clientCheckBox.Size = new System.Drawing.Size(200, 24);
 			this.clientCheckBox.TabIndex = 13;
-			this.clientCheckBox.Text = "Is Client?";
 			this.clientCheckBox.UseVisualStyleBackColor = true;
 			this.clientCheckBox.CheckedChanged += new System.EventHandler(this.clientCheckBox_CheckedChanged);
 			// 
 			// clientLabel
 			// 
 			clientLabel.AutoSize = true;
-			clientLabel.Location = new System.Drawing.Point(50, 196);
+			clientLabel.Location = new System.Drawing.Point(40, 190);
 			clientLabel.Name = "clientLabel";
 			clientLabel.Size = new System.Drawing.Size(36, 13);
 			clientLabel.TabIndex = 12;
@@ -151,7 +150,7 @@ namespace Contacts
 			// emailTextBox
 			// 
 			this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "Email", true));
-			this.emailTextBox.Location = new System.Drawing.Point(117, 165);
+			this.emailTextBox.Location = new System.Drawing.Point(124, 159);
 			this.emailTextBox.Name = "emailTextBox";
 			this.emailTextBox.Size = new System.Drawing.Size(262, 20);
 			this.emailTextBox.TabIndex = 11;
@@ -160,7 +159,7 @@ namespace Contacts
 			// emailLabel
 			// 
 			emailLabel.AutoSize = true;
-			emailLabel.Location = new System.Drawing.Point(50, 168);
+			emailLabel.Location = new System.Drawing.Point(40, 162);
 			emailLabel.Name = "emailLabel";
 			emailLabel.Size = new System.Drawing.Size(35, 13);
 			emailLabel.TabIndex = 10;
@@ -170,7 +169,7 @@ namespace Contacts
 			// telephoneTextBox
 			// 
 			this.telephoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "Telephone", true));
-			this.telephoneTextBox.Location = new System.Drawing.Point(117, 139);
+			this.telephoneTextBox.Location = new System.Drawing.Point(124, 133);
 			this.telephoneTextBox.Name = "telephoneTextBox";
 			this.telephoneTextBox.Size = new System.Drawing.Size(262, 20);
 			this.telephoneTextBox.TabIndex = 9;
@@ -179,7 +178,7 @@ namespace Contacts
 			// telephoneLabel
 			// 
 			telephoneLabel.AutoSize = true;
-			telephoneLabel.Location = new System.Drawing.Point(50, 142);
+			telephoneLabel.Location = new System.Drawing.Point(40, 136);
 			telephoneLabel.Name = "telephoneLabel";
 			telephoneLabel.Size = new System.Drawing.Size(61, 13);
 			telephoneLabel.TabIndex = 8;
@@ -189,7 +188,7 @@ namespace Contacts
 			// companyTextBox
 			// 
 			this.companyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "Company", true));
-			this.companyTextBox.Location = new System.Drawing.Point(117, 113);
+			this.companyTextBox.Location = new System.Drawing.Point(124, 107);
 			this.companyTextBox.Name = "companyTextBox";
 			this.companyTextBox.Size = new System.Drawing.Size(262, 20);
 			this.companyTextBox.TabIndex = 7;
@@ -198,7 +197,7 @@ namespace Contacts
 			// companyLabel
 			// 
 			companyLabel.AutoSize = true;
-			companyLabel.Location = new System.Drawing.Point(50, 116);
+			companyLabel.Location = new System.Drawing.Point(40, 110);
 			companyLabel.Name = "companyLabel";
 			companyLabel.Size = new System.Drawing.Size(54, 13);
 			companyLabel.TabIndex = 6;
@@ -208,7 +207,7 @@ namespace Contacts
 			// nameTextBox
 			// 
 			this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "Name", true));
-			this.nameTextBox.Location = new System.Drawing.Point(117, 87);
+			this.nameTextBox.Location = new System.Drawing.Point(124, 81);
 			this.nameTextBox.Name = "nameTextBox";
 			this.nameTextBox.Size = new System.Drawing.Size(262, 20);
 			this.nameTextBox.TabIndex = 5;
@@ -217,7 +216,7 @@ namespace Contacts
 			// nameLabel
 			// 
 			nameLabel.AutoSize = true;
-			nameLabel.Location = new System.Drawing.Point(50, 90);
+			nameLabel.Location = new System.Drawing.Point(40, 84);
 			nameLabel.Name = "nameLabel";
 			nameLabel.Size = new System.Drawing.Size(38, 13);
 			nameLabel.TabIndex = 4;
@@ -251,7 +250,6 @@ namespace Contacts
 			// 
 			this.bindingNavigatorPositionItem.AccessibleName = "Posição";
 			this.bindingNavigatorPositionItem.AutoSize = false;
-			this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
 			this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
 			this.bindingNavigatorPositionItem.Text = "0";
@@ -349,33 +347,30 @@ namespace Contacts
 			this.peopleBindingNavigator.TabIndex = 1;
 			this.peopleBindingNavigator.Text = "bindingNavigator1";
 			// 
-			// contactIDLabel1
+			// contactIDLabel
 			// 
-			contactIDLabel1.AutoSize = true;
-			contactIDLabel1.Location = new System.Drawing.Point(50, 65);
-			contactIDLabel1.Name = "contactIDLabel1";
-			contactIDLabel1.Size = new System.Drawing.Size(61, 13);
-			contactIDLabel1.TabIndex = 16;
-			contactIDLabel1.Text = "Contact ID:";
-			contactIDLabel1.Click += new System.EventHandler(this.contactIDLabel1_Click);
+			contactIDLabel.AutoSize = true;
+			contactIDLabel.Location = new System.Drawing.Point(40, 58);
+			contactIDLabel.Name = "contactIDLabel";
+			contactIDLabel.Size = new System.Drawing.Size(61, 13);
+			contactIDLabel.TabIndex = 15;
+			contactIDLabel.Text = "Contact ID:";
 			// 
-			// contactIDLabel2
+			// contactIDTextBox
 			// 
-			this.contactIDLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "ContactID", true));
-			this.contactIDLabel2.Location = new System.Drawing.Point(117, 65);
-			this.contactIDLabel2.Name = "contactIDLabel2";
-			this.contactIDLabel2.Size = new System.Drawing.Size(100, 13);
-			this.contactIDLabel2.TabIndex = 17;
-			this.contactIDLabel2.Text = "label1";
-			this.contactIDLabel2.Click += new System.EventHandler(this.contactIDLabel2_Click);
+			this.contactIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "ContactID", true));
+			this.contactIDTextBox.Location = new System.Drawing.Point(124, 55);
+			this.contactIDTextBox.Name = "contactIDTextBox";
+			this.contactIDTextBox.Size = new System.Drawing.Size(100, 20);
+			this.contactIDTextBox.TabIndex = 16;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(629, 290);
-			this.Controls.Add(contactIDLabel1);
-			this.Controls.Add(this.contactIDLabel2);
+			this.Controls.Add(contactIDLabel);
+			this.Controls.Add(this.contactIDTextBox);
 			this.Controls.Add(nameLabel);
 			this.Controls.Add(this.nameTextBox);
 			this.Controls.Add(companyLabel);
@@ -390,6 +385,9 @@ namespace Contacts
 			this.Controls.Add(this.lastCallDateTimePicker);
 			this.Controls.Add(this.peopleBindingNavigator);
 			this.Controls.Add(this.pictureBox1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Form1";
 			this.Text = "Contact List";
 			this.Load += new System.EventHandler(this.Form1_Load);
@@ -430,7 +428,7 @@ namespace Contacts
 		private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
 		private System.Windows.Forms.ToolStripButton peopleBindingNavigatorSaveItem;
 		private System.Windows.Forms.BindingNavigator peopleBindingNavigator;
-		private System.Windows.Forms.Label contactIDLabel2;
+		private System.Windows.Forms.TextBox contactIDTextBox;
 	}
 }
 
